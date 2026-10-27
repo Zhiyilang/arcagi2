@@ -1,0 +1,13 @@
+{
+  "id": "bakuyilang/arc-agi-2-solver-stdlib-cpu-offline-20261025",
+  "title": "ARC-AGI-2 Solver stdlib CPU offline 20261025",
+  "code_file": "submission.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": ["arc-prize-2026-arc-agi-2"],
+  "kernel_sources": []
+}

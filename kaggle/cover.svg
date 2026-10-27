@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="280" viewBox="0 0 560 280">
+  <!-- ARC-AGI palette: #000 #0074D9 #FF4136 #2ECC40 #FFDC00 #AAAAAA #F012BE #FF851B #7FDBFF #870C25 -->
+  <rect width="560" height="280" fill="#0d1b2a"/>
+  <rect x="0" y="0" width="560" height="4" fill="#0074D9"/>
+
+  <!-- title -->
+  <text x="280" y="46" font-family="Consolas, Menlo, monospace" font-size="30" font-weight="bold" fill="#F5F7FA" text-anchor="middle">arcagi2</text>
+  <text x="280" y="68" font-family="Consolas, Menlo, monospace" font-size="13" fill="#7FDBFF" text-anchor="middle">closed transform-DSL solver &#183; ARC Prize 2026</text>
+
+  <!-- transform demo: input grid -> arrow -> output grid -->
+  <g transform="translate(96,100)">
+    <!-- input 5x5 -->
+    <g>
+      <rect x="-6" y="-6" width="106" height="106" fill="none" stroke="#33475b" stroke-width="1"/>
+      <g>
+        <rect x="0" y="0" width="20" height="20" fill="#000000"/><rect x="20" y="0" width="20" height="20" fill="#0074D9"/><rect x="40" y="0" width="20" height="20" fill="#000000"/><rect x="60" y="0" width="20" height="20" fill="#000000"/><rect x="80" y="0" width="20" height="20" fill="#FF4136"/>
+        <rect x="0" y="20" width="20" height="20" fill="#0074D9"/><rect x="20" y="20" width="20" height="20" fill="#000000"/><rect x="40" y="20" width="20" height="20" fill="#0074D9"/><rect x="60" y="20" width="20" height="20" fill="#000000"/><rect x="80" y="20" width="20" height="20" fill="#000000"/>
+        <rect x="0" y="40" width="20" height="20" fill="#000000"/><rect x="20" y="40" width="20" height="20" fill="#0074D9"/><rect x="40" y="40" width="20" height="20" fill="#000000"/><rect x="60" y="40" width="20" height="20" fill="#000000"/><rect x="80" y="40" width="20" height="20" fill="#2ECC40"/>
+        <rect x="0" y="60" width="20" height="20" fill="#000000"/><rect x="20" y="60" width="20" height="20" fill="#000000"/><rect x="40" y="60" width="20" height="20" fill="#000000"/><rect x="60" y="60" width="20" height="20" fill="#FFDC00"/><rect x="80" y="60" width="20" height="20" fill="#000000"/>
+        <rect x="0" y="80" width="20" height="20" fill="#FF851B"/><rect x="20" y="80" width="20" height="20" fill="#000000"/><rect x="40" y="80" width="20" height="20" fill="#2ECC40"/><rect x="60" y="80" width="20" height="20" fill="#000000"/><rect x="80" y="80" width="20" height="20" fill="#F012BE"/>
+      </g>
+      <text x="46" y="126" font-family="Consolas, Menlo, monospace" font-size="11" fill="#8fa8bf" text-anchor="middle">train pairs</text>
+    </g>
+    <!-- arrow -->
+    <g transform="translate(120,44)">
+      <line x1="0" y1="0" x2="56" y2="0" stroke="#FFDC00" stroke-width="3"/>
+      <polygon points="56,0 46,-7 46,7" fill="#FFDC00"/>
+      <text x="28" y="-12" font-family="Consolas, Menlo, monospace" font-size="11" fill="#FFDC00" text-anchor="middle">search</text>
+    </g>
+    <!-- output grid: exact reproduction of demos -->
+    <g transform="translate(206,0)">
+      <rect x="-6" y="-6" width="106" height="106" fill="none" stroke="#2ECC40" stroke-width="2"/>
+      <g>
+        <rect x="0" y="0" width="20" height="20" fill="#000000"/><rect x="20" y="0" width="20" height="20" fill="#2ECC40"/><rect x="40" y="0" width="20" height="20" fill="#000000"/><rect x="60" y="0" width="20" height="20" fill="#000000"/><rect x="80" y="0" width="20" height="20" fill="#0074D9"/>
+        <rect x="0" y="20" width="20" height="20" fill="#2ECC40"/><rect x="20" y="20" width="20" height="20" fill="#000000"/><rect x="40" y="20" width="20" height="20" fill="#2ECC40"/><rect x="60" y="20" width="20" height="20" fill="#000000"/><rect x="80" y="20" width="20" height="20" fill="#000000"/>
+        <rect x="0" y="40" width="20" height="20" fill="#000000"/><rect x="20" y="40" width="20" height="20" fill="#2ECC40"/><rect x="40" y="40" width="20" height="20" fill="#000000"/><rect x="60" y="40" width="20" height="20" fill="#000000"/><rect x="80" y="40" width="20" height="20" fill="#0074D9"/>
+        <rect x="0" y="60" width="20" height="20" fill="#000000"/><rect x="20" y="60" width="20" height="20" fill="#000000"/><rect x="40" y="60" width="20" height="20" fill="#000000"/><rect x="60" y="60" width="20" height="20" fill="#0074D9"/><rect x="80" y="60" width="20" height="20" fill="#000000"/>
+        <rect x="0" y="80" width="20" height="20" fill="#0074D9"/><rect x="20" y="80" width="20" height="20" fill="#000000"/><rect x="40" y="80" width="20" height="20" fill="#0074D9"/><rect x="60" y="80" width="20" height="20" fill="#000000"/><rect x="80" y="80" width="20" height="20" fill="#F012BE"/>
+      </g>
+      <text x="46" y="126" font-family="Consolas, Menlo, monospace" font-size="11" fill="#2ECC40" text-anchor="middle">exact, or not emitted</text>
+    </g>
+  </g>
+
+  <!-- three pillars -->
+  <g font-family="Consolas, Menlo, monospace" font-size="11" fill="#c9d8e6">
+    <rect x="40" y="238" width="150" height="30" rx="4" fill="#16293d"/>
+    <text x="115" y="257" text-anchor="middle">exhaustive library</text>
+    <rect x="205" y="238" width="150" height="30" rx="4" fill="#16293d"/>
+    <text x="280" y="257" text-anchor="middle">prove-then-emit</text>
+    <rect x="370" y="238" width="150" height="30" rx="4" fill="#16293d"/>
+    <text x="445" y="257" text-anchor="middle">zero dependencies</text>
+  </g>
+</svg>

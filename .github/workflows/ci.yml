@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run offline assertion suite
+        run: python eval.py
+      - name: Run family ablation battery
+        run: python ablations.py
+      - name: Gate the AGI-2 solution writeup
+        run: python check_writeup.py
+
+  hostile-locale:
+    # The suite must not depend on UTF-8 mode or any locale: run it with a
+    # C locale, no PYTHONUTF8, and no third-party packages installed.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run under hostile locale
+        run: |
+          unset PYTHONUTF8
+          export LC_ALL=C LANG=C
+          python eval.py
+      - name: Zero-dependency check
+        run: python -c "import arcagi2, sys; assert all(m.split('.')[0] not in ('numpy','scipy','torch') for m in sys.modules)"
